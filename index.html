@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>JBitWise</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+
+</head>
+
+
+<body>
+
+<nav>
+
+<h2 class="logo">JBitWise</h2>
+
+<input
+type="text"
+id="searchBar"
+placeholder="Search notes, assignments, study materials..."
+onkeyup="searchPosts()"
+/>
+
+</nav>
+
+
+<section class="hero">
+
+<h1>JBitWise</h1>
+
+<p>
+A Smart Knowledge Hub For Students  
+Share Notes • Assignments • Important Questions • Study Materials
+</p>
+
+</section>
+
+
+<section class="upload">
+
+<input id="title" placeholder="Title of your note">
+
+<textarea
+id="content"
+placeholder="Write notes, assignment explanation or study material">
+</textarea>
+
+<select id="category">
+
+<option>Notes</option>
+<option>Assignments</option>
+<option>Important Questions</option>
+<option>Study Materials</option>
+
+</select>
+
+<input type="file" id="pdfUpload" accept="application/pdf">
+
+<button onclick="postContent()">Publish to JBitWise</button>
+
+</section>
+
+
+<section id="posts" class="posts"></section>
+
+
+<footer>
+
+Build By A DIT mind  
+Jyotirmoy Paul  
+AI DS Department
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
